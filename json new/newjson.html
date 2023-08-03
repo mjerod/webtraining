@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+        let a=JSON.stringify(
+            {
+  "result": [
+    {
+      "name": "John",
+      "marks": {
+        "math": "78",
+        "english": "90",
+        "chemistry": "64",
+        "physics": "89"
+      }
+    },
+    {
+      "name": "Mike",
+      "marks": {
+        "math": "67",
+        "english": "86",
+        "chemistry": "59",
+        "physics": "70"
+      }
+    },
+    {
+      "name": "Julia",
+      "marks": {
+        "math": "82",
+        "english": "75",
+        "chemistry": "73",
+        "physics": "84"
+      }
+    },
+    {
+      "name": "Tom",
+      "marks": {
+        "math": "76",
+        "english": "64",
+        "chemistry": "59",
+        "physics": "72"
+      }
+    },
+    {
+      "name": "Barbara",
+      "marks": {
+        "math": "90",
+        "english": "85",
+        "chemistry": "88",
+        "physics": "92"
+      }
+    }
+  ]
+}
+    )
+    //console.log(a)
+    let b=JSON.parse('{"result":[{"name":"John","marks":{"math":"78","english":"90","chemistry":"64","physics":"89"}},{"name":"Mike","marks":{"math":"67","english":"86","chemistry":"59","physics":"70"}},{"name":"Julia","marks":{"math":"82","english":"75","chemistry":"73","physics":"84"}},{"name":"Tom","marks":{"math":"76","english":"64","chemistry":"59","physics":"72"}},{"name":"Barbara","marks":{"math":"90","english":"85","chemistry":"88","physics":"92"}}]}')
+    //console.log(b.result[0]. marks)
+    /*for(let i in b.result[0])
+    {
+        console.log(b.result[0]);
+    }*/
+        /*for(let i=0;i<b.result.length;i++)
+        { 
+            let ol=document.createElement('ol');
+            ol.innerHTML=b.result[i].name;
+            document.body.appendChild(ol);
+        
+        for(let x in b.result[i].marks)
+        {
+            let li=document.createElement('li');
+            li.innerHTML=x+ ":" +b.result[i].marks[x];
+            li.style.position="relative";
+            li.style.left="100px";
+            document.body.appendChild(li);
+        }
+    
+        }*/
+        let select=document.createElement("select");
+        for(let i=0;i<b.result.length;i++)
+        {
+          let option=document.createElement("option");
+          option.innerText=b.result[i].name;
+          select.appendChild(option);
+          document.body.appendChild(select);
+        }
+
+    
+    </script>
+</body>
+</html>
