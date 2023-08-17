@@ -1,0 +1,18 @@
+.top{
+    margin-left: 100px;
+}
+.main{
+    display: flex;
+    justify-content: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    height:75px;
+}
+.a{
+    padding:auto;
+    width: 100px;
+    height: 100px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    color: rgb(41, 105, 105);   
+}
